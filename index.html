@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description"
+            content="Upgrade your Roblox experience with Bloxstrap, a comprehensive and user-friendly open-source launcher. Download Bloxstrap today for enhanced features and customization!" />
+        <meta name="keywords"
+            content="bloxstrap, download bloxstrap, bloxstrap roblox, bloxstrap launcher, bloxstrap apk, bloxstrap mobile" />
+        <meta name="author" content="Bloxstrap Team" />
+        <title>Bloxstrap (v2.7.0) » Premier Roblox Launcher [Official Download]</title>
+        <!-- <link rel="canonical" href="https://bloxstrapofficial.com/" /> -->
+        <link rel="icon" type="image/x-icon" href="https://i.ibb.co/hYBPyGv/bloxstrap.png" />
+        <style>
+            :root {
+                --color-1: #6B47FA;
+                --color-2: #5e54f9;
+                --color-3: #fe0047;
+                --font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                --font-primary: Poppins, sans-serif;
+                --font-secondary: "Open sans", sans-serif;
+                --gradient-1: #6B47FA, #8a23f8, #585cfb;
+            }
+
+            html {
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%;
+            }
+
+            body {
+                margin: 0;
+                line-height: 1.5rem;
+                letter-spacing: 0.02rem;
+                background-color: #3f3d3d;
+                color: #ffffff;
+                font-family: var(--font-primary), var(--font-default);
+                font-size: 14.5px;
+                overflow-wrap: break-word;
+                line-height: 2em;
+                text-align: justify;
+            }
+
+            h1,
+            h2,
+            h3 {
+                margin: 0;
+            }
+
+            ::-moz-selection {
+                background-color: #059aae;
+                color: #fff;
+            }
+
+            ::selection {
+                background-color: #059aae;
+                color: #fff;
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                opacity: 1;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            /********** Header **********/
+            .header-wrapper {
+                background: #210540;
+                background: radial-gradient(circle, rgba(30, 7, 53, 1) 0%, #7830ad, #8337b3);
+                padding: 0 8rem;
+                -webkit-box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+                box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+            }
+
+            .header {
+                padding: 1.25rem 0.625rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 75rem;
+            }
+
+            .header .logo {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+            }
+
+            .header .logo svg {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .header .logo span {
+                margin-left: 0.5rem;
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.125rem;
+                transition: color 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ccc;
+            }
+
+            .hamburger {
+                display: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .hamburger svg {
+                color: white;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .mobile-menu {
+                background: var(--color-1);
+                padding: 1.25rem;
+            }
+
+            .mobile-menu a {
+                display: block;
+                margin-bottom: 0.625rem;
+                text-decoration: none;
+                color: white;
+                font-size: 1.125rem;
+                transition: color 0.3s;
+            }
+
+            .mobile-menu a:hover {
+                color: #ccc;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .outer-wrapper {
+                -webkit-box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+                box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+                margin: 2.125rem auto 0;
+                max-width: 80%;
+                background-color: #212225;
+                border-radius: 2rem 2rem 0 0;
+            }
+
+            /*** footer ***/
+            #footer-wrapper {
+                display: block;
+                width: 100%;
+                margin-top: 80px;
+                background: #210540;
+                background: radial-gradient(circle, rgba(30, 7, 53, 1) 0%, #7830ad, #8337b3);
+                padding: 0 8rem;
+                -webkit-box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+                box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+                padding: 80px 0 0;
+                color: white;
+            }
+
+            .footer-middle {
+                margin: 0 auto;
+            }
+
+            .footer-middle .title,
+            .social .title {
+                font-size: 1.5rem;
+                letter-spacing: 0.05em;
+                padding-top: 0.313rem;
+            }
+
+            #footer-wrapper ul li a:hover {
+                color: var(--color-2);
+            }
+
+            .footer-left {
+                margin: 0 auto;
+            }
+
+            .subscribe-form {
+                margin-top: 0.5rem;
+            }
+
+            .subscribe-form label {
+                font-weight: 700;
+            }
+
+            .subscribe-form button {
+                border-radius: 0.75rem;
+                background-color: var(--color-2);
+                color: white;
+                border: 0;
+            }
+
+            .subscribe-form button:hover {
+                background-color: white;
+                color: black;
+            }
+
+            #sub-footer-wrapper {
+                background-color: #000;
+                overflow: hidden;
+                margin-top: 40px;
+                padding: 1rem 9.75rem;
+                border-top: 1px solid white;
+            }
+
+            .copyright-area {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 34px;
+            }
+
+            #sub-footer-wrapper .menu {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .sub-footer {
+                display: flex;
+                justify-content: space-between;
+                max-width: 1200px;
+            }
+
+            .social-links {
+                display: flex;
+                margin-top: 0.75rem;
+                gap: 0.75rem;
+            }
+
+            .social-icon {
+                transition: color 0.3s;
+            }
+
+            .social-icon:hover {
+                color: var(--color-2);
+            }
+
+            .social-icon svg {
+                height: 1.5rem;
+            }
+
+            .follow-text {
+                margin-top: 0.25rem;
+                font-size: 1rem;
+                color: white;
+            }
+
+            /********** Showcase **********/
+
+            /**** HERO SECTION BACKGROUND URL IS DOWN HERE ****/
+
+            .showcase {
+                overflow: hidden;
+                color: #fff;
+                border-radius: 2rem 2rem 0 0;
+                -webkit-box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+                box-shadow: rgb(0 0 0/19%) 0 0 20px 0;
+            }
+
+            .show {
+                padding: 5em 0 2rem;
+                height: auto;
+                color: #dfdfdf;
+                background: -o-linear-gradient(45deg, #000000a0, #0000009f);
+                background: linear-gradient(45deg, #000000a0, #0000009f);
+            }
+
+            h1.title {
+                color: #fff;
+                line-height: 3.125rem;
+                font-size: calc(0.5vw + 3.8em);
+                margin: 1rem;
+                font-weight: 300;
+            }
+
+            .download h1.title {
+                animation: none;
+            }
+
+            .show-img {
+                height: auto;
+                margin: 2em auto 0 0;
+            }
+
+            .show ul {
+                margin: 1em 0;
+            }
+
+            .show li {
+                font-size: 1rem;
+                list-style-type: none;
+            }
+
+            .show p {
+                line-height: 2;
+                margin: 0.625rem 0;
+                color: inherit;
+                font-size: 17px;
+            }
+
+            .show li::before {
+                content: "- ";
+            }
+
+            .text-glow {
+                display: block;
+                color: #fff;
+                font-weight: 700;
+                padding: 0.5em 1em;
+                border-radius: 0.3125rem;
+                font-size: calc(0.7vw + 2em);
+                -webkit-text-fill-color: #5e54f9;
+                -webkit-background-clip: text;
+                background-clip: text;
+                font-variant-caps: titling-caps;
+                text-shadow: var(--color-1) 0 0.3125rem 1.25rem;
+            }
+
+            .typewrite {
+                margin: 0;
+            }
+
+            .typewrite .wrap {
+                border-right: 0.1em solid #ffffff31;
+            }
+
+            .btn {
+                border: 2px solid var(--color-2) !important;
+                text-decoration: none;
+                font-weight: 600;
+                display: block;
+                width: fit-content;
+                padding: 15px 20px;
+                margin: 1.5em auto;
+                color: #ffffff;
+                font-variant-caps: all-small-caps;
+                letter-spacing: 1px;
+                transition: 0.2s ease-in-out;
+            }
+
+            a.btn:hover {
+                transform: translateY(-2px);
+                border-color: var(--color-2);
+            }
+
+            a.download {
+                color: #fff;
+                border-radius: 50px;
+
+                box-shadow: none;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+            /****cnt****/
+            .cnt {
+                padding: 2rem;
+            }
+
+            .cnt a,
+            .cnt li a {
+                position: relative;
+                color: var(--color-2);
+                font-weight: 700;
+                border-bottom: 1px dashed #8d8d8d;
+            }
+
+            .p1>p {
+                text-indent: 7rem;
+                margin: 0;
+            }
+
+            .cnt p span {
+                font-size: 3rem;
+                font-style: italic;
+                line-height: 1.25;
+            }
+
+            .cnt img {
+                display: block;
+                margin: 3em auto;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .cnt .btn {
+                color: black;
+            }
+
+            .cnt .btn:hover {
+                background-color: var(--color-2);
+                color: white;
+            }
+
+            .heading {
+                color: rgb(255, 255, 255);
+                font-weight: 400;
+                width: auto;
+                font-size: 25px;
+                line-height: 1;
+                /* box-shadow: rgb(206, 206, 206) 6px 6px 0px 0px; */
+                background: rgb(30, 7, 53);
+                background: radial-gradient(circle, rgba(30, 7, 53, 1) 0%, rgba(88, 35, 100, 1) 64%);
+                ;
+                margin: 1em 0px;
+                border-radius: 0px;
+                padding: 14px;
+            }
+
+            /**** TOC ****/
+            .toc {
+                display: inline-block;
+                margin: 1em 0;
+                border-radius: 10px;
+                padding: 10px 1em;
+                -webkit-box-shadow: rgba(72, 72, 72, 0.19) 0 0 13px 0;
+                box-shadow: rgba(147, 145, 145, 0.19) 0 0 13px 0;
+            }
+
+            .toc li {
+                margin: 0 1em;
+                list-style-type: disc;
+            }
+
+            .toc a:hover {
+                border: none;
+                text-decoration: none;
+                color: var(--color-1);
+            }
+
+            /**** requirements****/
+
+            .table {
+                margin: 2rem auto;
+                display: grid;
+                justify-items: center;
+            }
+
+            #requirements {
+                border-collapse: collapse;
+                width: 50%;
+            }
+
+            #versions {
+                width: 90%;
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
+
+            td,
+            th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr:hover {
+                background-color: #ddd;
+            }
+
+            th {
+                padding: 0.75rem 0;
+                background-color: var(--color-1);
+                color: white;
+                font-size: larger;
+            }
+
+            #versions a {
+                color: var(--color-2);
+            }
+
+            #versions a:hover {
+                color: var(--color-1);
+            }
+
+            /**** steps ****/
+            .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 1rem;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1rem;
+            }
+
+            .step {
+                text-align: center;
+                background: #3F3D3D;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .step .icon {
+                width: 4rem;
+                height: 4rem;
+                background-color: #33393f;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+            }
+
+            .step .icon svg {
+                width: 2.5rem;
+                height: 2.5rem;
+                color: var(--color-2);
+            }
+
+            .step p {
+                margin: 0.5rem 0;
+            }
+
+            .step .description {
+                background-color: #4a5568;
+                color: white;
+                padding: 0.5rem;
+                border-radius: 0.25rem;
+                height: 8rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .arrow {
+                display: none;
+            }
+
+            /**** Features ****/
+            .boxdiv {
+                margin: 4em 0;
+                display: -ms-grid;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                -webkit-column-gap: 1em;
+                -moz-column-gap: 1em;
+                column-gap: 1em;
+                row-gap: 4em;
+            }
+
+            .box {
+                border-bottom: 2px solid #5e54f9;
+                text-align: left;
+                padding: 1em;
+                -webkit-transition: 0.2s ease-in-out;
+                -o-transition: 0.2s ease-in-out;
+                transition: 0.2s ease-in-out;
+            }
+
+            .box p {
+                margin: 0;
+            }
+
+            .boxtxt {
+                display: block;
+                background: -o-linear-gradient(60deg, var(--gradient-1));
+                background: -o-linear-gradient(30deg, var(--gradient-1));
+                background: linear-gradient(60deg, var(--gradient-1));
+                color: #ccc;
+                font-weight: 500;
+                margin: 0;
+                padding: 10px 0;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background-clip: text;
+                -webkit-text-fill-color: #5e54f9;
+                -webkit-background-clip: text;
+            }
+
+            .box-icon svg {
+                width: 80px;
+                height: 80px;
+                fill: #000;
+                -webkit-transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                -o-transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .box:hover {
+                border-color: var(--color-1);
+                -webkit-transform: scale(1.01) translateY(-5px);
+                -ms-transform: scale(1.01) translateY(-5px);
+                transform: scale(1.01) translateY(-5px);
+            }
+
+            /*** Use ***/
+            .use-title {
+                font-weight: 400;
+                width: auto;
+                font-size: 2rem;
+                line-height: 1.5;
+                margin: 2rem 6rem;
+                color: white;
+                background-color: var(--color-2);
+                /* box-shadow: rgb(206, 206, 206) 6px 6px 0px 0px; */
+            }
+
+            .use {
+                display: flex;
+                align-items: center;
+                margin: 2rem 6rem;
+            }
+
+            .use .logo {
+                width: 40%;
+            }
+
+            .use .logo img {
+                width: 18em;
+            }
+
+            .use .list {
+                width: 70%;
+            }
+
+            .footer-middle ul,
+            .menu,
+            .prosandcons ul,
+            .list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .list li {
+                position: relative;
+                padding-left: 40px;
+                margin-bottom: 10px;
+            }
+
+            .list li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 3px;
+                width: 24px;
+                height: 24px;
+                background: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNUU1NEY5IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+PGcgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGcgIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj48cGF0aCBkPSJNMTIgMkM2LjQ4NiAyIDIgNi40ODYgMiAxMnM0LjQ4NiAxMCAxMCAxMCAxMC00LjQ4NiAxMC0xMFMxNy41MTQgMiAxMiAyem0wIDE1di00SDd2LTJoNVY3bDUgNS01IDV6Ii8+PC9nPjwvc3ZnPg==") no-repeat center;
+                background-size: 24px 24px;
+            }
+
+            /*** pro and cons ***/
+            .prosandcons {
+                display: flex;
+                gap: 4rem;
+                margin: 4rem;
+            }
+
+            .list-container {
+                flex: 1;
+            }
+
+            .list-container h3 {
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 1.5;
+                color: white;
+            }
+
+            .list-container ul {
+                padding: 0.75em;
+            }
+
+            .pros h3 {
+                background-color: #00bf13;
+            }
+
+            .list-container .pros {
+                border: 2px solid #00bf13;
+            }
+
+            .pros li::before {
+                background: url('data:image/svg+xml;utf8,<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z" fill="%2300bf13"/></svg>') no-repeat center;
+                background-size: contain;
+                color: #00bf13;
+            }
+
+            .cons h3 {
+                background-color: #ce1d00;
+            }
+
+            .list-container .cons {
+                border: 2px solid #ce1d00;
+            }
+
+            .cons li::before {
+                background: url('data:image/svg+xml;utf8,<svg fill="%23ce1d00" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="cross-circle" class="icon glyph" stroke="%23ce1d00"><path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.71,12.29a1,1,0,0,1,0,1.42,1,1,0,0,1-1.42,0L12,13.42,9.71,15.71a1,1,0,0,1-1.42,0,1,1,0,0,1,0-1.42L10.58,12,8.29,9.71A1,1,0,0,1,9.71,8.29L12,10.58l2.29-2.29a1,1,0,0,1,1.42,1.42L13.42,12Z"/></svg>') no-repeat center;
+                background-size: contain;
+            }
+
+            /**** FAQ *****/
+
+            .faq-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .faq-item {
+                margin-bottom: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(156, 138, 138, 0.1);
+                color: rgb(255, 253, 253);
+                width: 60%;
+            }
+
+            .faq-question {
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
+                background-color: var(--color-1);
+                color: #fff;
+                border-radius: 8px;
+                padding: 1rem;
+            }
+
+            .faq-question:hover {
+                background-color: var(--color-2);
+            }
+
+            .faq-container p {
+                display: none;
+                padding: 0.5rem 1rem;
+                border: 1px gray;
+            }
+
+            /**** CONTACT FORM ****/
+            .form1 {
+                width: 100%;
+                max-width: 32rem;
+                margin: 1.25rem auto;
+                background-color: #dbdbdb;
+                padding: 1.25rem;
+                border-radius: 0.375rem;
+                border: 0.125rem solid #cbd5e0;
+            }
+
+            .label {
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: #4a5568;
+                font-size: 0.75rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            .input,
+            .textarea {
+                appearance: none;
+                display: block;
+                width: 100%;
+                background-color: #f7fafc;
+                color: #4a5568;
+                border-radius: 0.375rem;
+                padding: 0.75rem 1rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.25rem;
+            }
+
+            .input:focus,
+            .textarea:focus {
+                outline: none;
+                background-color: #fff;
+                border-color: #a0aec0;
+            }
+
+            .textarea {
+                height: 12rem;
+                resize: none;
+            }
+
+            .button {
+                width: 17.75rem;
+                margin-top: 20px;
+                border-radius: 0.5rem;
+                height: 2.5rem;
+                font-size: 20px;
+            }
+
+            /********** Responsive **********/
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                }
+
+                .header-wrapper {
+                    padding: 0;
+                }
+
+                h1.title {
+                    font-size: calc(0.5vw + 2.8em);
+                }
+
+                .hamburger {
+                    display: block;
+                }
+
+                .outer-wrapper {
+                    margin: 0;
+                    max-width: 100%;
+                    border-radius: 0;
+                }
+
+                .showcase {
+                    border-radius: 0;
+                }
+
+                #requirements {
+                    width: 100%;
+                }
+
+                .container {
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                }
+
+                .use-title,
+                .use {
+                    margin: 2rem 0;
+                }
+
+                .use {
+                    flex-direction: column;
+                }
+
+                .prosandcons {
+                    margin: 0;
+                    flex-direction: column;
+                }
+
+                .use .list,
+                .faq-item {
+                    width: 100%;
+                }
+
+                .faq-question {
+                    font-size: small;
+                }
+
+
+
+                #sub-footer-wrapper {
+                    padding: 0;
+                }
+
+                .sub-footer {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                #sub-footer-wrapper .menu {
+                    gap: 0.5rem;
+                }
+
+                #footer-wrapper {
+                    padding: 40px 0 0;
+                }
+
+                .footer-middle .title,
+                .social .title {
+                    font-size: 1.25rem;
+                }
+
+                .sub-footer {
+                    padding: 0 1rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+
+                .footer-middle .title,
+                .social .title {
+                    font-size: 1rem;
+                }
+
+                .footer-middle,
+                .footer-left {
+                    margin: 0;
+                }
+
+                .follow-text {
+                    font-size: 0.875rem;
+                }
+
+                .social-icon svg {
+                    height: 1.25rem;
+                }
+
+                #sub-footer-wrapper .menu {
+                    display: block;
+                    gap: 0.5rem;
+                    padding-top: 0.5rem;
+                }
+
+                .sub-footer {
+                    flex-direction: column-reverse;
+                    align-items: baseline;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .step {
+                    padding-right: 4rem;
+                }
+
+                .step .arrow {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    right: 0.5rem;
+                    top: 50%;
+                }
+
+                .step .arrow svg {
+                    transform: rotate(0deg);
+                    width: 2rem;
+                    height: 2rem;
+                    color: #4a5568;
+                }
+            }
+
+            .screen {
+                width: 60%;
+                margin: 4rem auto;
+                position: relative;
+                background: var(--color-1);
+                border-radius: 15px;
+            }
+
+            .screen:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                right: 20px;
+                bottom: 0;
+                border-radius: 15px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                z-index: -1;
+            }
+
+            .screen-body {
+                display: flex;
+            }
+
+            .screen-body-item {
+                flex: 1;
+                padding: 50px;
+            }
+
+            .screen-body-item.left {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .app-title {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                color: white;
+                font-size: 26px;
+            }
+
+            .app-title:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 25px;
+                height: 4px;
+                background: #ea1d6f;
+            }
+
+            .app-contact {
+                margin-top: auto;
+                font-size: 8px;
+                color: white;
+            }
+
+            .app-form-group {
+                margin-bottom: 15px;
+            }
+
+            .app-form-group.message {
+                margin-top: 40px;
+            }
+
+            .app-form-group.buttons {
+                margin-bottom: 0;
+                text-align: right;
+            }
+
+            .app-form-control {
+                width: 100%;
+                padding: 10px 0;
+                background: none;
+                border: none;
+                border-bottom: 1px solid white;
+                color: white;
+                font-size: 14px;
+                text-transform: uppercase;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+
+            .app-form-control::placeholder {
+                color: whitesmoke;
+                opacity: 0.2;
+            }
+
+            .app-form-control:focus {
+                border-bottom-color: white;
+            }
+
+            .app-form-button {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 14px;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .app-form-button:hover {
+                color: var(--color-3);
+            }
+
+            @media screen and (max-width: 520px) {
+                .screen-body-item.left {
+                    margin-bottom: 30px;
+                }
+
+                .app-title {
+                    flex-direction: row;
+                }
+
+                .app-title span {
+                    margin-right: 12px;
+                }
+
+                .app-title:after {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .screen {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .screen-body {
+                    padding: 40px;
+                    flex-direction: column;
+                }
+
+                .screen-body-item {
+                    padding: 0;
+                }
+            }
+
+            .status-message {
+                margin-top: 10px;
+                display: none;
+                font-size: 0.75rem;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .success {
+                color: white;
+                background-color: #1fd655;
+                border-color: #1fd655;
+            }
+
+            .error {
+                color: white;
+                background-color: #ff0000;
+                border-color: #ff0000;
+            }
+
+            .fixes li {
+                list-style: none;
+                margin: 0;
+                padding-left: 1rem;
+                line-height: 2rem;
+                position: relative;
+            }
+
+            .fixes li::before {
+                content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2328a745"><path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z"/></svg>');
+                position: absolute;
+                left: -1.5rem;
+                transform: translateY(10%);
+            }
+
+            .inner-title {
+                max-width: fit-content;
+                padding: 0 7px;
+                margin: 10px 0;
+                box-shadow: rgb(0, 0, 0) 6px 6px 8px 0px;
+            }
+
+            .bold {
+                color: cadetblue;
+                border-bottom: 1px dashed cadetblue;
+                font-size: medium;
+                font-style: italic;
+                font-weight: bolder;
+            }
+
+            .bold:hover {
+                color: var(--color-2);
+                border-bottom: 0;
+            }
+
+            .toc ol {
+                padding-left: 20px;
+                margin: 0;
+            }
+
+            .toc ol li {
+                list-style: none;
+                position: relative;
+                padding-left: 24px;
+            }
+
+            .toc ol li::before {
+                content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%23000000"><path d="M10 16H11L16 11L11 6H10V10H4V1H2V12H10V16Z"/></svg>');
+                position: absolute;
+                left: 0;
+                width: 16px;
+                height: 16px;
+            }
+
+            .bg-color {
+                color: #fff;
+                background-color: var(--color-1);
+                padding: 20px 30px;
+                border-radius: 10px;
+            }
+
+            hr {
+                margin: 2em auto;
+                width: 30%;
+                height: 2px;
+                border: none;
+                background: linear-gradient(90deg, #585cfb, #8a23f8 68%, #751c9c);
+            }
+
+            .main-title {
+                color: white;
+                margin: 2rem;
+                font-weight: 600;
+                font-size: xxx-large;
+                line-height: normal;
+            }
+
+            .main-title span {
+                font-size: xx-large;
+            }
+
+            .sub-title {
+                font-weight: 400;
+                width: auto;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0rem 6rem;
+                font-weight: bold;
+            }
+
+            .sub-title span {
+                font-size: large;
+            }
+
+            @media (max-width: 768px) {
+                .main-title {
+                    font-size: xx-large;
+                    margin: 1rem 0;
+                }
+
+                .main-title span {
+                    font-size: large;
+                }
+
+                .sub-title {
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+
+                .sub-title span {
+                    font-size: medium;
+                }
+
+                hr {
+                    margin: 1rem auto;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="header">
+            <a class="logo" href="/" title="Bloxstrap">
+                <span> BLOXSTRAP </span>
+            </a>
+    </div>
+
+    <main class="outer-wrapper">
+        <!--  HERO SECTION(BACKGROUND IMAGE URL IS IN CSS (CLASS: showcase) ) -->
+        <div class="showcase center" style="
+          background: url(https://cdn2.steamgriddb.com/thumb/cf6648630731cd09879d60cf6e87ec0b.jpg) no-repeat center;
+          background-attachment: fixed;
+          background-size: cover;
+        ">
+            <div class="show">
+                <h1 class="title">BLOXSTRAP</h1>
+
+                <img alt="Download Bloxstrap" class="show-img" height="160" loading="lazy"
+                    src="https://i.ibb.co/hYBPyGv/bloxstrap.png" title="Download Bloxstrap" width="160" />
+
+                <div class="show-in">
+                    <p class="center">
+                        Download Bloxstrap the #1 Free and open-source, alternative bootstrapper for Roblox.
+                    </p>
+                    <!-- <h2 class="typewrite text-glow" data-period="0"
+                        data-type='[ "Quick Fast Flag Editing", "User Activity Monitoring", "Discord In-Game Display", "Custom Mod Support", "Regional Server Checker"]'>
+                        <span class="wrap" />
+                    </h2> -->
+                    <div class="btndiv center">
+                        <a class="btn download" href="#download"><svg fill="none" height="24" viewBox="0 0 24 24"
+                                width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10V20M12 20L9.5 17.5M12 20L14.5 17.5" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path clip-rule="evenodd"
+                                    d="M6.322 7.057C7.129 4.697 9.366 3 12 3s4.871 1.697 5.678 4.057C19.564 7.379 21 9.022 21 11c0 2.209-1.791 4-4 4h-1c-.552 0-1-.448-1-1s.448-1 1-1h1c1.105 0 2-.895 2-2s-.895-2-2-2c-.022 0-.045 0-.067.001-.488.016-.916-.322-1.013-.799C15.55 6.374 13.935 5 12 5s-3.55 1.374-3.92 3.201c-.097.477-.525.815-1.013.799C7.045 9 7.022 9 7 9 5.895 9 5 9.895 5 11s.895 2 2 2h1c.552 0 1 .448 1 1s-.448 1-1 1H7c-2.209 0-4-1.791-4-4 0-1.978 1.436-3.621 3.322-3.943z"
+                                    fill="currentColor" fill-rule="evenodd" />
+                            </svg>
+                            Bloxstrap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  HOME PAGE SECTIONS -->
+        <div class="cnt">
+            <div class="p1">
+                <p>
+                    Bloxstrap is an independent launcher created separately from Roblox, yet it is entirely secure and
+                    does not jeopardize your account. Unlike unauthorized tools or cheats that alter game mechanics,
+                    Bloxstrap serves as an alternative launcher, improving the user experience without changing the core
+                    game files. It provides extra features and customization options while preserving the game's
+                    integrity. This makes it a popular choice among dedicated Roblox players seeking enhanced
+                    flexibility and control over their game setup.
+                </p>
+
+            </div>
+
+            <!--  Featured image -->
+            <img alt="Bloxstrap" height="504" loading="lazy"
+                src="https://img.youtube.com/vi/fhlaxawbek8/maxresdefault.jpg" title="Featured image" width="896" />
+
+            <!--  TABLE OF CONTENT -->
+            <div class="toc">
+                <h2>Table of Content</h2>
+                <ul>
+                    <li><a href="#bloxstrap">What is Bloxstrap? </a></li>
+                    <li><a href="#download">Download Bloxstrap</a></li>
+                    <li><a href="#install">How to Download Bloxstrap?</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">FAQ&#39;s</a></li>
+                    <li><a href="#wrapup">Conclusion</a></li>
+                </ul>
+            </div>
+
+            <!--  SECTION 1 -->
+            <h2 class="heading center" id="bloxstrap">What is Bloxstrap?</h2>
+            <p> Bloxstrap is an innovative open-source tool that serves as a versatile alternative launcher for Roblox,
+                designed to enhance the gaming experience. Created by the developer pizzaboxer, Bloxstrap offers a range
+                of customization options that allow Roblox players to tailor the launcher to their tastes. Users can
+                modify the launcher’s appearance with a variety of themes and styles, creating a unique and personalized
+                interface. Beyond aesthetics, Bloxstrap supports modding, enabling players to adjust game visuals,
+                mechanics, and interfaces for a more customized gameplay experience. </p>
+            <p> One of Bloxstrap's notable features is its integration with Discord, a popular communication platform
+                for gamers. With Discord Rich Presence, Bloxstrap users can display their current Roblox activities to
+                friends, showing which game they are playing in real time. This feature not only boosts social
+                interaction and community engagement but also makes it easier for friends to join each other's games
+                with a simple click. Bloxstrap’s extensive customization and Discord integration make it an excellent
+                choice for players looking to elevate their Roblox experience beyond the default settings. </p>
+
+            <!--  SECTION 2 (DOWNLOAD ) -->
+
+            <h2 class="heading center" id="download">Download Bloxstrap</h2>
+
+            <img alt="download bloxstrap" height="192" loading="lazy" src="https://i.ibb.co/hYBPyGv/bloxstrap.png"
+                title="download bloxstrap" width="192" />
+
+            <h3 class="center">Bloxstrap || v2.7.0 || 7.06MB</h3>
+            <a class="btn download" href="#download" style="color: #ffffff;"><svg fill="#ffffff" height="24"
+                    viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 10V20M12 20L9.5 17.5M12 20L14.5 17.5" stroke="#ffffff" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                    <path clip-rule="evenodd"
+                        d="M6.322 7.057C7.129 4.697 9.366 3 12 3s4.871 1.697 5.678 4.057C19.564 7.379 21 9.022 21 11c0 2.209-1.791 4-4 4h-1c-.552 0-1-.448-1-1s.448-1 1-1h1c1.105 0 2-.895 2-2s-.895-2-2-2c-.022 0-.045 0-.067.001-.488.016-.916-.322-1.013-.799C15.55 6.374 13.935 5 12 5s-3.55 1.374-3.92 3.201c-.097.477-.525.815-1.013.799C7.045 9 7.022 9 7 9 5.895 9 5 9.895 5 11s.895 2 2 2h1c.552 0 1 .448 1 1s-.448 1-1 1H7c-2.209 0-4-1.791-4-4 0-1.978 1.436-3.621 3.322-3.943z"
+                        fill="#ffffff" fill-rule="evenodd" />
+                </svg>
+                Download
+            </a>
+
+            <!--  SECTION 3 (REQURIREMENTS ) -->
+            <h2 class="heading center" id="install">
+                How to Download and Use Bloxstrap?
+            </h2>
+
+
+            <!--  SECTION 3 (INSTALL STEPS ) -->
+            <div class="container">
+                <div class="step">
+                    <div class="icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <p>Step 1</p>
+                    <p class="description">
+                        Visit the official Bloxstrap website and click on the download button to Download bloxstrap.
+                        Select the “Latest
+                        Version” to begin downloading the setup file.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <p>Step 2</p>
+                    <p class="description">
+                        Locate the “Bloxstrap.exe” file in your downloads folder or the designated location where you
+                        saved the installer.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <p>Step 3</p>
+                    <p class="description">
+                        Double-click the “Bloxstrap.exe” file to begin the installation. If you are prompted to install
+                        the .NET Desktop Runtime, agree to proceed.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <p>Step 4</p>
+                    <p class="description">
+                        After installing the .NET Desktop Runtime, run “Bloxstrap.exe” again to complete the setup
+                        process.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <svg width="800px" height="800px" fill="currentColor" version="1.1" viewBox="0 0 512 512"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M512,405.854V31.219H0v374.634h187.317v37.463H143.61v37.463H368.39v-37.463h-43.707v-37.463H512z M287.219,443.317 h-62.439v-37.463h62.439V443.317z M37.463,368.39V68.683h437.073V368.39H37.463z" />
+                            <path
+                                d="m249.31 250.98c0-5.801-0.729-11.434-2.09-16.817l18.477-10.667-18.732-32.443-18.521 10.693c-8.048-7.82-17.999-13.682-29.085-16.83v-21.349h-37.463v21.349c-11.085 3.148-21.036 9.01-29.085 16.829l-18.519-10.693-18.732 32.443 18.476 10.667c-1.361 5.385-2.09 11.017-2.09 16.819s0.729 11.434 2.09 16.819l-18.476 10.667 18.732 32.443 18.519-10.693c8.05 7.819 18 13.68 29.085 16.829v21.349h37.463v-21.349c11.087-3.148 21.037-9.01 29.085-16.83l18.521 10.693 18.732-32.443-18.477-10.667c1.36-5.387 2.09-11.019 2.09-16.819zm-68.683 31.221c-17.214 0-31.22-14.005-31.22-31.22 0-17.214 14.005-31.219 31.22-31.219 17.214 0 31.219 14.005 31.219 31.219 0 17.215-14.005 31.22-31.219 31.22z" />
+                            <path
+                                d="m407.08 182.3v-37.463h-21.944c-1.141-3.213-2.573-6.349-4.315-9.366-1.743-3.017-3.743-5.826-5.953-8.422l10.971-19.004-32.443-18.732-10.979 19.018c-6.862-1.286-13.807-1.292-20.542-0.034l-10.961-18.984-32.443 18.732 10.977 19.013c-4.518 5.296-7.957 11.339-10.23 17.779h-21.99v37.463h21.957c1.13 3.193 2.551 6.329 4.303 9.366 1.752 3.036 3.766 5.826 5.964 8.401l-10.984 19.025 32.443 18.732 10.993-19.041c3.402 0.634 6.86 0.96 10.334 0.96 5.048 0 10.066-0.614 14.91-1.832l10.97 19.004 32.443-18.732-10.983-19.018c4.505-5.304 7.946-11.335 10.219-17.762zm-69.683 15.748c-6.643 11.502-21.311 15.434-32.814 8.791-11.502-6.642-15.434-21.311-8.791-32.814 6.643-11.503 21.312-15.434 32.814-8.791 11.502 6.643 15.434 21.311 8.791 32.814z" />
+                        </svg>
+                    </div>
+                    <p>Step 5</p>
+                    <p class="description">
+                        Follow the on-screen prompts to finish the Bloxstrap installation process.
+                    </p>
+                </div>
+            </div>
+
+            <!--  SECTION 3 (USE SECTION ) -->
+
+            <h2 class="heading center" id="setup-guide">
+                Setting Up and Using Bloxstrap
+            </h2>
+            <div class="instructions">
+                <div class="logo">
+                    <img alt="Bloxstrap setup guide" class="show-img" loading="lazy"
+                        src="https://i.ibb.co/hYBPyGv/bloxstrap.png" title="Bloxstrap logo" />
+                </div>
+
+                <ul class="steps">
+                    <li>
+                        <strong>Step 1: Install Bloxstrap</strong> - <a href="https://bloxstrapofficial.com/"
+                            style="text-decoration: none; color: dodgerblue;">Download Bloxtrap</a> and then install
+                        it.
+                    </li>
+                    <li>
+                        <strong>Step 2: Launch Bloxstrap</strong> - Locate the Bloxstrap icon on your desktop or in the
+                        start menu and open it.
+                    </li>
+                    <li>
+                        <strong>Step 3: Link with Roblox</strong> - During the initial setup, select the directory where
+                        Roblox is installed and let Bloxstrap establish the connection.
+                    </li>
+                    <li>
+                        <strong>Step 4: Explore and Customize</strong> - Familiarize yourself with the Bloxstrap
+                        interface, explore different tabs, and adjust settings such as Activity Tracking and Discord
+                        Integration.
+                    </li>
+                    <li>
+                        <strong>Step 5: Configure Features</strong> - Use the provided toggles and checkboxes to enable
+                        or disable specific functionalities as per your needs.
+                    </li>
+                    <li>
+                        <strong>Step 6: Apply Settings and Launch Roblox</strong> - Save your configurations and start
+                        Roblox with Bloxstrap enhancements.
+                    </li>
+                    <li>
+                        <strong>Step 7: Manage Multiple Roblox Instances</strong> - Utilize Bloxstrap’s feature to
+                        manage multiple Roblox sessions simultaneously if required.
+                    </li>
+                </ul>
+            </div>
+
+            <!--  SECTION 4 (FEATURES ) -->
+            <h2 class="heading center" id="wrapup">
+                Features
+            </h2>
+            <div class="boxdiv">
+                <div class="box" style="text-align: center">
+                    <h3 class="boxtxt" style="display: inline-block; margin-bottom: 10px">
+                        Personalized In-Game Adjustments
+                    </h3>
+                    <span class="box-icon" style="display: block; margin: 0 auto">
+                        <!-- SVG Icon for Custom In-Game Settings -->
+                        <svg width="192" height="192" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-1.85 0-3.58-.63-4.95-1.68l11.27-11.27C18.37 8.42 19 10.15 19 12c0 4.41-3.59 8-8 8zm-8-8c0-4.41 3.59-8 8-8 1.85 0 3.58.63 4.95 1.68L5.68 16.95C4.63 15.58 4 13.85 4 12z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                    <p style="display: block; margin: 10px auto">
+                        Customize your gaming experience with advanced settings that surpass the standard Roblox
+                        options. Adjust graphics, frame rates, and other elements to enhance gameplay.
+
+                    </p>
+                </div>
+                <div class="box" style="text-align: center">
+                    <h3 class="boxtxt" style="display: inline-block; margin-bottom: 10px">
+                        Seamless Account Switching
+                    </h3>
+                    <span class="box-icon" style="display: block; margin: 0 auto">
+                        <!-- SVG Icon for Multiple Account Management -->
+                        <svg width="192" height="192" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                    <p style="display: block; margin: 10px auto">
+                        Switch effortlessly between multiple Roblox accounts without repeated logins. Ideal for users
+                        managing various profiles or for shared computers.
+
+                    </p>
+                </div>
+                <div class="box" style="text-align: center">
+                    <h3 class="boxtxt" style="display: inline-block; margin-bottom: 10px">
+                        Enhanced Performance Settings
+                    </h3>
+                    <span class="box-icon" style="display: block; margin: 0 auto">
+                        <!-- SVG Icon for Enhanced Performance Options -->
+                        <svg width="192" height="192" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13H5v-2h14v2zm-7-9L4 20h16L12 4z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <p style="display: block; margin: 10px auto">
+                        Boost your game’s performance with options designed to improve frame rates and reduce lag,
+                        perfect for those with older systems or those seeking peak performance.
+
+                    </p>
+                </div>
+                <div class="box" style="text-align: center">
+                    <h3 class="boxtxt" style="display: inline-block; margin-bottom: 10px">
+                        Extensive Customization Capabilities
+                    </h3>
+                    <span class="box-icon" style="display: block; margin: 0 auto">
+                        <!-- SVG Icon for Advanced Customization Features -->
+                        <svg width="192" height="192" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 19h14v2H5zm7-18L5.33 7h13.34L12 1zm0 5L7 10.33V21h10V10.33L12 6z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                    <p style="display: block; margin: 10px auto">
+                        Tailor your launcher with various themes, layout adjustments, and more to fit your personal
+                        style and needs.
+                    </p>
+                </div>
+                <div class="box" style="text-align: center">
+                    <h3 class="boxtxt" style="display: inline-block; margin-bottom: 10px">
+                        Advanced Debugging Tools
+                    </h3>
+                    <span class="box-icon" style="display: block; margin: 0 auto">
+                        <!-- SVG Icon for Improved Debugging and Logging Tools -->
+                        <svg width="192" height="192" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11 7h2v2h-2zm0 4h2v6h-2zm-1 7h4v2h-4zm4-18H6v2h8V1zm-4 0H5v2h1V1zM2 3h2v2H2V3zm3 0h2v2H5V3zm4 0h2v2H9V3zm2 0h2v2h-2V3zm2 0h2v2h-2V3zm-1 5h-2v6H6v4h6v-4h-2v-2h2v-4z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                    <p style="display: block; margin: 10px auto">
+                        Utilize enhanced tools for debugging and logging, helping to pinpoint and resolve issues with
+                        game performance or connectivity.
+
+                    </p>
+                </div>
+            </div>
+
+
+            <!--  SECTION 7 (FAQS ) -->
+            <h2 class="heading center" id="faq">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is Bloxstrap a secure tool?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <p>
+                        Yes, Bloxstrap is secure. As an open-source Roblox launcher, it operates within the guidelines
+                        of Roblox’s terms of service and does not interfere with the core game.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Could using Bloxstrap lead to account suspension?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <p>
+                        No, using Bloxstrap will not result in account suspension. It is designed to be a compliant
+                        launcher that adds extra features without altering the core gameplay or breaching Roblox's
+                        rules.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I modify Roblox using Bloxstrap?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <p>
+                        Yes, Bloxstrap provides a range of customization features, such as themes and graphical
+                        enhancements, allowing you to adjust your Roblox experience to fit your personal taste.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is additional software needed for Bloxstrap?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <p>
+                        You might need to install the .NET Desktop Runtime if it's not already on your machine. The
+                        installation process will guide you through any additional requirements.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What’s the process for updating Bloxstrap?</h3>
+                        <span>&#9660;</span>
+                    </div>
+                    <p>
+                        To update Bloxstrap, download the latest version from the official website and execute the
+                        installer. The update will be handled automatically during the installation process.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <h2 class="heading center" id="conclusion">Final Thoughts</h2>
+            <p>
+                Bloxstrap serves as a powerful and adaptable alternative to the standard Roblox launcher, offering a
+                range of enhancements for those seeking to elevate their Roblox gameplay. With features such as
+                multi-account support, performance improvements, and a wealth of customization options, Bloxstrap
+                delivers increased flexibility and control. Whether you're a casual gamer or a dedicated Roblox fan,
+                Bloxstrap is designed to maximize your gaming experience.
+            </p>
+
+        </div>
+    </main>
+    <footer id="footer-wrapper">
+        <div class="container">
+            <!-- LOGO AND DESCRIPTION -->
+            <div class="footer-right">
+                <a class="logo" href="/" title="bloxstrap">
+                    <span style="font-size: 2.5rem; font-weight: 800"> BLOXSTRAP </span>
+                </a>
+
+                <br />
+                <span class="caption">
+                    Bloxstrap is a free and open-source application tailored for Roblox users, providing the ability to
+                    personalize the game's look and introduce additional functionalities. As an open-source project, its
+                    code is openly available, allowing anyone to examine, modify, and contribute to its ongoing
+                    development.
+                </span>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        if (faqQuestions.length > 0) {
+            const firstAnswer = faqQuestions[0].nextElementSibling;
+            firstAnswer.style.display = "block";
+        }
+        faqQuestions.forEach((item) => {
+            item.addEventListener("click", () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = "";
+            this.tick();
+            this.isDeleting = false;
+        };
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+            this.isDeleting
+                ? (this.txt = fullTxt.substring(0, this.txt.length - 1))
+                : (this.txt = fullTxt.substring(0, this.txt.length + 1));
+            this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+            if (this.isDeleting) delta /= 2;
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === "") {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+            setTimeout(() => that.tick(), delta);
+        };
+
+    </script>
+</body>
+
+</html>
